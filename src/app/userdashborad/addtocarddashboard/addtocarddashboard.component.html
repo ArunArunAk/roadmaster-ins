@@ -1,0 +1,121 @@
+<ng-container *ngIf="productlist.length == 0 ">
+  
+
+    <div class="container-fluid  mt-100">
+				 <div class="row">
+				 
+					<div class="col-md-12">
+					
+							<div class="card">
+						<div class="card-header">
+						<h5>ADD INSURANCE ON INSURANCE CART</h5>
+						</div>
+						<div class="card-body cart">
+								<div class="col-sm-12 empty-cart-cls text-center">
+									<img src="https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705390882447?alt=media&token=1dc7e566-74d3-4af7-b2db-4caff192aeae" width="400" height="400" class="img-fluid mb-4 mr-3">
+									<h3><strong>Your Insurance Cart is Empty</strong></h3>
+									<h4>Add something to make me happy :)</h4>
+									<a href="#" class="btn btn-primary cart-btn-transform m-3" data-abc="true" [routerLink]="'/bikecard'">Take Insurance</a>
+									
+								
+								</div>
+						</div>
+				</div>
+						
+					
+					</div>
+				 
+				 </div>
+                </div>
+				
+
+</ng-container>
+
+<ng-container *ngIf="productlist.length != 0">
+    <div class="container">
+        <!-- <table class="table table-responsive ">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Insurance </th>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col">price</th>
+                <th scope="col">Action</th>
+
+
+
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of productlist; let i = index">
+                    <td>{{i+1}}</td>
+                <td>{{item.title}}</td>
+                <td><img src="{{item.image }}" alt="" width="80px" height="80px"></td>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>
+
+                <td><button class="btn btn-danger" (click)="removeItem(item)"><i class="fa-solid fa-trash"></i></button></td>
+                
+
+              </tr>
+             
+            </tbody>
+            <div class="footer-btn d-flex">
+                <button class="btn btn-primary "style="width:150px">{{grandamount}}</button> &nbsp; &nbsp;
+                <button class="btn btn-info" style="width:150px"  (click)="removeall()" >DeleteAll</button>
+            </div >
+           
+          </table> -->
+    
+          <div class="table-responsive">
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                  <th scope="col">S.No</th>
+                  <th scope="col">Insurance</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of productlist ; let i = index">
+                  <td>{{i + 1}}</td>
+                  <td>{{item.data.policyname}}</td>
+                  <td><img src="{{item.data.policyproviderimg}}" alt="" width="80px" height="80px"></td>
+                  <td>{{item.data.policydescription}}</td>
+                  <td>{{item.data.policyprice}}</td>
+                  <td><button class="btn btn-danger" (click)="removeItem(item)"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+               
+              </tbody>
+             
+              
+            </table>
+          </div>
+        <div class="footer-btn d-flex ">
+            <button class="btn btn-primary" style="width: 150px" (click)="removeall()">Delete All</button>
+          </div> 
+           
+        </div>
+   
+</ng-container>
+
+
+
+
+
+
+
+
+  <!-- <div class="container-fluid empty-card">
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-sm-6 mb-6">
+                <img src="assets/car8.jpg" alt="empty-card" class="img-fluid">
+                <h1><strong>Empty Saver</strong></h1>
+                <button class="btn btn-info" [routerLink]="'/cart'">Take Insurance</button>
+            </div>
+        </div>
+    </div> -->

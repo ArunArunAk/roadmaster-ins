@@ -1,0 +1,495 @@
+
+.carousel{
+    border-radius: 10px;
+    /* background-image: url('car8.jpg'); */
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705381746534?alt=media&token=44a19121-10d7-490b-bad4-a23c1762b6e5); /* Adjust the path as needed */
+
+    background-position: center;
+  
+    background-size: cover;
+}
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+
+}
+.carousel-caption{
+    bottom:220px;
+    z-index:2;
+    left:8%;
+}
+.carousel-item h5{
+    font-size: 45px;
+    margin-top: 0%; 
+     color:white;
+    font-weight: 800;
+    text-align: left;
+    position: relative;
+    bottom: -20px;
+}
+.carousel-caption h5 span{
+    color: var(--red);
+}
+.carousel-caption p{
+
+    width: 60%;
+    /* margin-top: 100px; */
+    font-size: 17px;
+    line-height: 1.8;
+    color:white;
+    text-align: left;
+    position: relative;
+    bottom: -20px;
+    font-weight: 600;
+
+    
+}
+.carousel-caption button{
+    bottom: -30px;
+    position: absolute;
+    left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel-item h5{
+        font-size: 45px;
+        margin-top: 0%; 
+         color:white;
+        font-weight: 800;
+        text-align: left;
+        position: relative;
+        bottom: -210px;
+    }
+    .carousel-caption h5 span{
+        color: var(--red);
+    }
+    .carousel-caption p{
+    
+        width: 60%;
+        /* margin-top: 100px; */
+        font-size: 17px;
+        line-height: 1.8;
+        color:white;
+        text-align: left;
+        position: relative;
+        font-weight: 500;
+        bottom: -210px;
+       
+        
+    }
+}
+
+.carousel-caption a{
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--black);
+    padding: 5px 20px;
+    display: inline-block;
+    color:white;
+    margin-top: 20px;
+    position: relative;
+    bottom: 30px;
+        border-radius: 5px;
+}
+.carousel-item a{
+    background-color:var(--blueviolet);
+    }
+
+    /* ---------------premium-calculator--- */
+    .premium-calculator h2{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .premium-calculator h2 span{
+        color:var(--blueviolet)
+    }
+
+    .premium-calculator p{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    .border{
+        border: 2px solid blueviolet;
+
+    }
+    .premium-calculator .border{
+        padding: 10px 10px;  
+        border-radius: 50px;
+        display: flex;
+        color: var(--blueviolet);
+        border-width: 10px;
+        border: 2px solid blueviolet;
+
+    }
+    .premium-calculator .border .imgsec{
+        margin: 20px;
+        border-radius: 100%;
+    }
+    .premium-calculator .border .imgsec img{
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid blueviolet;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .border{
+            border: 2px solid blueviolet;
+            margin-top: 20px;
+    
+        }
+        .premium-calculator .border .imgsec img{
+            cursor: pointer;
+            width: 2000px;;
+            height: auto;
+        } 
+        .premium-calculator .border .imgsec{
+            margin: 20px;
+        }
+        .premium-calculator .border{
+            padding: 10px 10px;  
+            border-radius: 50px;
+            display: flex;
+            color: var(--blueviolet);
+    
+        }
+    }
+
+
+
+ /* --------------------------services---------------------- */
+ 
+.service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-heading{
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 50px;
+}
+.service-heading h1{
+    font-weight: 800;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+ .service-heading span{
+    color: var(--blueviolet);
+    font-weight: 800;
+    text-align: center;
+
+ }
+
+ 
+ .services-image h4{
+    color:var(--cement);
+    font-size: 20px;
+    font-weight: 800;
+ }
+ .service-types .col-lg-3{
+    text-align: center;
+    margin-top: 20px;
+    /* border: 2px solid black;
+    border-radius: 30px; */
+}
+.services-image img{
+    margin-left: 70px;
+}
+.service-types img{
+    padding: 5px;
+}
+ @media only screen and (max-width: 600px) {
+    .service-heading{
+        font-weight: 800;
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .service-heading h1{
+        font-weight: 800;
+        text-align: center;
+        text-decoration: underline;
+    
+    }
+    
+     .service-heading span{
+        color: var(--blueviolet);
+        font-weight: 800;
+        text-align: center;
+    
+     }
+     .services-image h4{
+        color:var(--cement);
+        font-weight: 400;
+
+     }
+     .services-image .col-4{
+        margin-bottom: 10px;
+     }
+     .services-image img{
+        margin-left: 0px;
+    }
+
+ }
+/* ------------------------------------design for bike--------- */
+
+.section-aboutProtection {
+    margin-top: 20px;
+}
+.section-bike img{
+    margin-left: 100px;
+}
+.section-bike h3{
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 40px;
+
+}
+.section-bike h3 span{
+    color: var(--blueviolet);
+}
+
+.section-bike p{
+    margin-top: 20px;
+
+    margin-left: 100px;
+    list-style:1.2;
+
+}
+@media only screen and (max-width: 600px) {
+    .section-aboutProtection {
+        margin-top: 30px;
+    }
+    
+    .section-bike img{
+       margin-left: 10px;
+    }
+    .section-bike h3{
+        margin-left: 40px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-weight: 800;
+        margin-top: 20px;
+    
+    }
+    .section-bike h3 span{
+        color: var(--blueviolet);
+    }
+    
+    .section-bike p{
+        margin-top: 20px;
+    
+        margin-left: 30px;
+        
+        list-style:1.2;
+    
+    } 
+}
+/* ------------------------------design for bike--------------------------- */
+.section-aboutProtection1 h3{
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 30px;
+
+}
+.section-aboutProtection1 h3 span{
+    color: var(--blueviolet);
+}
+.section-aboutProtection1 p{
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .section-aboutProtection1 h3{
+        margin-top: 0px;
+        font-size: 30px;
+        font-weight: 800;
+    
+    }
+    .section-aboutProtection1 h3 span{
+        color: var(--blueviolet);
+    }
+    .section-aboutProtection1 p{
+        margin-top: 20px;
+    
+    }
+    .section-aboutProtection1 car{
+        margin-top: 50px;
+    }
+
+     
+}
+/* ---------why choose----------------------- */
+.why-choose .section-header h2{
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.why-choose .section-header  h3{
+    color: var(--blueviolet);
+    font-size: 30px;
+    font-weight: 800;
+}
+.reasonpart-grid .card{
+    box-shadow:0 0 16px 0 rgba(168,168,168,.4);
+    border: none;
+    margin-top: 20px;
+
+}
+.reasonpart-grid .fa-solid{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+
+}
+.reasonpart-grid .card h2{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--blue);
+}
+
+.reasonpart-grid .card p{
+    color: var(--cement);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ @media only screen and (max-width: 600px) {
+   
+    .reasonpart-grid .card{
+        box-shadow:0 0 16px 0 rgba(168,168,168,.4);
+        border: none;
+        margin-top: 20px;
+    }
+    .reasonpart-grid .fa-solid{
+        font-size: 25px;
+        padding-top: 20px;
+    
+    }
+    .reasonpart-grid .card h2{
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--blue);
+    }
+    
+    .reasonpart-grid .card p{
+        color: var(--cement);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+   
+
+}  
+
+-------------------------------------patners---------------------
+
+.patners-logo-row1{
+    padding-right: 15px;
+    text-align: center;
+}
+.patners-logo-row2{
+    padding: 15px;
+    text-align: center;
+    margin-top: 15px;
+
+
+}
+.patners-logo-row3{
+    padding: 15px;
+    text-align: center;
+    margin-top: 15px;
+
+
+}
+
+ 
+.patners-heading h2{
+    font-weight: 800;
+    color:var(--blueviolet);
+    font-size: 40px;
+    margin-top: 30px;
+}
+.patners-heading p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+}
+
+ @media only screen and (max-width: 600px) {
+    .patners-logo-row1{
+      text-align: center;
+      margin-top: 15px;
+    }
+    .patners-logo-row2{
+        text-align: center;
+        margin-top: 15px;
+    
+    
+    }
+    .patners-logo-row3 {
+   display: none;
+    }
+    
+     
+    .patners-heading h2{
+        font-weight: 800;
+        color:var(--blueviolet);
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    .patners-heading p{
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    
+    }
+} 
+/* ---------------------footer-top------ */
+.happycustomer .card{
+    background-color: var(--blue1);
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+.happycustomer .achieved{
+    font-size: 40px;
+    font-weight: 800;
+}
+@media only screen and (max-width: 600px) {
+
+    .happycustomer .area{
+        margin-top: 20px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+/* .card-body img{
+    width: 100%;
+} */
+
+small{
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+
+
+} 
+
+.card img{
+    background-size:cover;
+    background-position:center;
+    overflow: hidden;
+}

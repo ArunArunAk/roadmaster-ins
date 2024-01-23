@@ -1,0 +1,13 @@
+.footcontainer{
+    background-color: black;
+}
+.text-uppercase{
+    font-size: 20px;
+    font-weight: 800;
+}
+footer a{
+    font-size: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    
+}

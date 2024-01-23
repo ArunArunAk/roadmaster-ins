@@ -1,0 +1,116 @@
+.nav-areas .card{
+    border-radius: 20px;
+    border: 2px solid black;
+
+}
+.item h6{
+    color: blue;
+}
+.item h6:hover{
+    color: #FF0000;
+
+}
+.profilebanner-containers{
+    width:100%;
+    height:250px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705412108108?alt=media&token=f02b849d-5190-42c2-b6b4-15e016b0aeee);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    background-color: blue;
+} 
+.profilebanner-title{
+    text-align: center;
+    color:aliceblue;
+    font-weight: 1000;
+    font-size: 200px;
+    padding-top: 90px;
+
+}
+.profilebanner-title h1{
+   font-size: 50px;
+   font-weight: 900;
+}
+.profilebanner-title h6{
+        font-weight:800;
+}
+.saveeighty h3{
+   font-size: 30px;
+   font-weight: 800;
+   margin: 30px 0px;
+
+}
+.saveeighty h3 span{
+    color: var(--blueviolet);
+}
+
+
+/* ----------------------------------------- */
+.item img{
+    width: 65px;
+    height: auto;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.item{
+    margin: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 0%;
+   
+   
+}
+
+
+/* ----------------------img-crad-------- */
+ .card-img-top{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 50%;
+
+}
+.cardarea .card{
+    margin-top: 20px;
+    box-shadow:0 0 16px 0 rgba(168,168,168,.4);
+
+    border: none;
+    border-radius: 5%;
+    
+
+
+}
+.card-img-top:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+
+}
+
+@media only screen and (max-width: 600px) {
+    .card-img-top{
+        margin-left: 60px;
+    }
+    .item img{
+        width: 65px;
+        height: auto;
+        margin-left: 0;
+    }
+    .profilebanner-title{
+        text-align: center;
+        color:aliceblue;
+        font-weight: 1000;
+        font-size: 200px;
+        padding-top: 50px;
+    
+    }
+    .nav-areas .card{
+        border-radius: 10px;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 506px) {
+   .blogcard img {
+     margin-right: 100px;
+     margin-left: 0px;
+   }
+  }

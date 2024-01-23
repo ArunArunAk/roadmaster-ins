@@ -1,0 +1,33 @@
+<ngx-spinner
+bdColor="white"
+size="medium"
+color="blueviolet"
+type="line-scale-pulse-out-rapid"
+[fullScreen]="true" *ngIf="showspinneranimation"
+>
+<p style="color: black" class="mt-3">RoadMaster...</p>
+</ngx-spinner>
+ 
+ <section class="featured-section">
+    <div   class="container-fluid">
+      <div class="row">
+       
+        <div class="profilebanner-containers mb-3">
+ 
+          <div class="profilebanner-title col-lg-12 col-md-12 col-12">
+            <h1  class="animated fadeInDown" style="animation-delay:3s ;">FEATURED POST</h1>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row featuredcontainer">
+          <app-post-card-slider  ></app-post-card-slider>
+        </div>
+  <div class="mt-3">
+    <app-subscription-form></app-subscription-form>
+
+  </div>
+    </div>
+</section>
+
+ 

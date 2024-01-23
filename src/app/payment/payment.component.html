@@ -1,0 +1,14 @@
+<!-- payment.component.html -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="paypal-container text-center mx-5 mt-5">
+                <div class="amount">Total amount to pay: ${{amount}}</div>
+                <div class="amount">Please do not refresh the browser during the transaction.</div>
+                <div #paymentRef class="paypal-button-container"></div>
+                <div class="back btn btn-primary mt-3" (click)="cancel()">Cancel</div>
+            </div>
+        </div>
+    </div>
+</div>

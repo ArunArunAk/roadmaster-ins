@@ -1,0 +1,51 @@
+body{
+    margin-top:20px;
+    /* background: #f6f9fc; */
+}
+.account-block {
+    padding: 0;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705661893400?alt=media&token=48ff072f-39bc-4ae5-be02-49f6990c9505");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+.account-block .overlay {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.account-block .account-testimonial {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.text-theme {
+    color: #5369f8 !important;
+}
+span{
+    color: #5369f8 ;
+
+}
+h6{
+    font-size: 25px;
+    font-weight: 800;
+}
+.btn-theme {
+    background-color: #5369f8;
+    border-color: #5369f8;
+    color: #fff;
+    width:100%
+}

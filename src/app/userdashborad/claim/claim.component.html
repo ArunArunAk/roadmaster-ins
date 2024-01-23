@@ -1,0 +1,94 @@
+
+<ng-container *ngIf="!tablesshow" >
+  
+
+    <div class="container-fluid  mt-100">
+				 <div class="row">
+				 
+					<div class="col-md-12">
+					
+							<div class="card">
+						<div class="card-header">
+						<h5 class="text-center"> Claim satatus</h5>
+						</div>
+						<div class="card-body cart">
+								<div class="col-sm-12 empty-cart-cls text-center">
+									<img src="https://us.123rf.com/450wm/alwie99d/alwie99d2301/alwie99d230102291/196675469-registration-of-claim-form-document-providing-personal-information-income-information-vector-set-tax.jpg?ver=6" width="400" height="400" class="img-fluid mb-4 ">
+									<h3><strong>Nill</strong></h3>
+									<h4>Claim Of Roadmaster Insurance :)</h4>
+									
+								
+								</div>
+						</div>
+				</div>
+						
+					
+					</div>
+				 
+				 </div>
+                </div>
+				
+
+</ng-container>
+
+
+
+<ng-container *ngIf="tablesshow" >
+  <div class="container mt-5">
+            
+       <h3 class="text-center mx-5 mb-3 ">Claim status</h3>
+  
+       <div class="table-responsive">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">policyId</th>
+              <th scope="col">Vehicle no</th>
+              <th scope="col">Claim apply date</th>
+              <th scope="col">policyName</th>
+              <th scope="col">firstName</th>
+              <th scope="col">email</th>
+              <th scope="col">status</th>
+
+
+
+            </tr>
+          </thead>
+          <tbody *ngFor="let freeins of claimlist ; let i = index">
+           
+            <tr  >
+              <td>{{i+1}}</td>
+              <td>{{freeins.data.policyId}}</td>
+              <td>{{freeins.data.bikeno}}</td>
+              <td>{{freeins.data.claimDate.toMillis()| date}}</td>
+              <td>{{freeins.data.policyName}}</td>
+              <td>{{freeins.data.firstName}}</td>
+
+              <td>{{freeins.data.email}}</td>
+              <td>
+                <button class="btn btn-success btn1 " *ngIf="freeins.data.claimStatus === true">Claim Success</button>&nbsp;
+                
+                <button class="btn btn-warning btn1 " *ngIf="freeins.data.claimStatus === false" >wait for Admin Access</button>
+
+              </td>
+             
+
+            </tr>
+           
+          </tbody>
+         
+          
+        </table>
+      </div>
+    
+         
+      </div>
+ 
+</ng-container>
+
+
+
+
+
+ 

@@ -1,0 +1,32 @@
+<ngx-spinner
+  bdColor="white"
+  size="medium"
+  color="blueviolet"
+  type="line-scale-pulse-out-rapid"
+  [fullScreen]="true"
+>
+  <p style="color: black" class="mt-3">RoadMaster...</p>
+</ngx-spinner>
+
+
+<div class="container-fluid premiumcontainer">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12 ">
+        <img src="https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705389874950?alt=media&token=d483ad17-d7f3-4ac5-9a0b-1982f0eecd6d" class="img-fluid" alt="roadmaster">
+      </div>
+      <div class="col-lg-6 col-md-6 col-12  ">
+        <h3 class="animated fadeInUp" style="animation-delay:5s ;">Buy your Four-wheeler insurance in</h3>
+        <h2 class="text-blueviolet animated fadeInDown " style="animation-delay:5s ;" >60 seconds!</h2>
+        <form [formGroup]="premiumForm" (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <input type="text" class="form-control smaller-input" formControlName="carNumber" placeholder="Enter Four number (e.g., TN90T6543)">
+            <div *ngIf="premiumForm?.get('carNumber')?.hasError('pattern') && premiumForm?.get('carNumber')?.touched">
+              <small class="text-danger">Invalid car number format. Example: TN90TT6543</small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary"  [disabled]="premiumForm.get('carNumber')?.invalid">Calculate Premium</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

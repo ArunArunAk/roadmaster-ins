@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center mt-3 mb-5">
+                <h1>SUBSCRIPTION </h1>
+                <p class="m-auto subs-text text-center">Subscribe for latest updates</p>
+                <div class="alert alert-danger mt-3 " *ngIf="errorshow">
+                    Email already in Use By User
+                </div>
+                <div class="alert alert-success mt-3"  *ngIf="successhow">
+                    Thank U for subscribe
+                </div>
+                <form [formGroup]="subscribeForm" class="d-flex form-subscribe form-inline mb-5" (ngSubmit)="onSubmit()">
+                    <div class="form-group col-md-5">
+                        <input type="text" class="form-control" placeholder="Your name" formControlName="username">
+                        <div *ngIf="f['username'].hasError('required') && f['username'].touched" class="text-danger">
+                            Name is required
+                            ng build
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <input type="email" class="form-control" placeholder="Email address" formControlName="email">
+                        <div *ngIf="f['email'].hasError('required') && f['email'].touched" class="text-danger">
+                            Email is required
+                        </div>
+                        <div *ngIf="f['email'].hasError('email') && f['email'].touched" class="text-danger">
+                            Invalid email format
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-info btn-block btn-sub" [disabled]="subscribeForm.invalid">SUBSCRIBE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<ngx-spinner
+  bdColor="white"
+  size="medium"
+  color="blueviolet"
+  type="line-scale-pulse-out-rapid"
+  [fullScreen]="true"
+*ngIf="showspinner">
+  <p style="color: black" class="mt-3">fetching Detail...</p>
+</ngx-spinner>
+
+<div class="container plan">
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-12 ">
+             <div class="card text-center registerno-card animated fadeInUp"  style="animation-delay:9s ;">
+                {{bikeNumber.toUpperCase()}}
+             </div>
+             <div>
+              <div class="mt-4 mb-4 ml-5">
+                <div class="form-group">
+                  <label for="dropdown" class="mt-3 mb-3">Select Category:</label>
+                  <select class="form-control drpdown" id="dropdown" (change)="onDropdownChange($event)">
+                    <option value="option1">All</option>
+                    <option value="option2">1st party</option>
+                    <option value="option3">2nd party</option>
+                    <option value="option4">3rd party</option>
+                    <option value="option5">Add-ons</option>
+                  </select>
+                </div>
+              </div>
+              
+            
+            <!-- *ngFor="let showplan of filteredPlans.slice(0, 5)"  -->
+                <div class="card card-list "  *ngFor="let showplan of filteredPlans" >
+                    <div class="card-body d-flex justify-content-between" >
+                        <div class="fadeInDown" style="animation-delay:8s ;">
+                          <img src="{{showplan.data.policyproviderimg}}" class="img-fluid card-img" alt="Card Image">
+                        </div>
+                      
+                        <div class="ml-3 fadeInUp" style="animation-delay:9s ;">
+                           <h5 class="card-title">{{showplan.data.policyprovidername}}</h5>
+                        </div>
+                      
+                        <div class="ml-3">
+                          <button class="btn btn-primary px-5" [routerLink]="['/showplan',bikeNumber,showplan.id]">₹{{showplan.data.policyprice}} </button>
+                        </div>
+                      </div>
+                   
+               
+                  </div>
+                  
+                  
+             </div>
+             <div>
+                <div class="card card-list " *ngFor="let showplan of filteredPlans.slice(0, 5)" >
+                    <div class="card-body d-flex justify-content-between" >
+                        <div >
+                          <img src="{{showplan.data.policyproviderimg}}" class="img-fluid card-img" alt="Card Image">
+                        </div>
+                      
+                        <div class="ml-3">
+                          <h5 class="card-title">{{showplan.data.policyprovidername}}</h5>
+                        </div>
+                      
+                        <div class="ml-3">
+                          <button class="btn btn-primary px-5" [routerLink]="['/showplan',bikeNumber,showplan.id]">₹{{showplan.data.policyprice}} </button>
+                        </div>
+                      </div>
+                   
+               
+                  </div>
+                  
+                  
+             </div>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-12  rules">
+
+            <h3 style="color: black; font-weight: bold ;" class="mt-3">How do we insure in 60 seconds?</h3>
+            <h6 style="color: #333; " class="mt-5">1. We have got your bike details, so you just select a plan</h6>
+            <h6 style="color: #333;" class="mt-5">2. Share your email & mobile number where we can send your policy copy</h6>
+            <h6 style="color: #333;"class="mt-5">3. Pay premium including GST and download your policy</h6>
+            <h6 style="color: #333;" class="mt-4">4. Choose additional coverage options based on your needs</h6>
+           <h6 style="color: #333;" class="mt-4">5. Review and confirm your policy details</h6>
+           <h6 style="color: #333;" class="mt-4">6. Receive instant confirmation and access your policy documents</h6>
+        </div>
+    </div>
+</div>

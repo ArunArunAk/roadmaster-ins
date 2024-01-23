@@ -1,0 +1,169 @@
+
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}  */
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  /* background-color: var(--body-color); */
+  background-color: white;
+  color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.card__container {
+  /* padding-block: 5rem; */
+  overflow: hidden;
+  
+
+}
+
+.card__content {
+  /* margin-inline: 1.75rem; */
+  border-radius: 1.25rem;
+  overflow: hidden;
+
+}
+
+.card__article {
+  width: 300px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__image {
+  background-color:black;
+    box-shadow:0 0 16px 0 rgba(168,168,168,.4);
+
+
+
+}
+
+.card__data {
+  /* background-color:darkcyan; */
+  /* padding: 1.5rem 2rem; */
+  padding-top: 10px;
+  text-align: left;
+ 
+}
+
+.card__img {
+  width: 100%;
+  height: 200px;
+ 
+}
+
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color:black;
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  /* margin-bottom: 1.75rem; */
+  color:black;
+
+}
+
+
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color:black;
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+
+
+.rounded-label {
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 20px; /* Adjust the value for more or less rounding */
+  /* background-color: #f8f9fa;  */
+  /* background-color: white; */
+  /* background-color: hsl(0, 0%, 60%) !important; */
+   /* Light variation of #666666 */
+
+  /* color: black !important; */
+  /* color: #666666  !important;; */
+  /* color: white !important; */
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid white 
+}
+/* ------------------------------------------- */
+

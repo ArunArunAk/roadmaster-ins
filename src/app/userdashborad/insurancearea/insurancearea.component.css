@@ -1,0 +1,16 @@
+.img-fluid {
+    margin-left: 330px;
+}
+.card{
+    border: none;
+}
+@media only screen and (max-width: 600px) {
+    .img-fluid {
+        margin-left: 0px;
+    }
+    h3{
+        font-size: 16px;
+    }
+}
+
+

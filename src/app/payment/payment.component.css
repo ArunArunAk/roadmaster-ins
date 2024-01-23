@@ -1,0 +1,23 @@
+.paypal-container{
+    height: 400px;
+    text-align: center;
+
+}
+.amount{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* payment.component.css */
+.paypal-button-container {
+    display: inline-block; /* Make the container inline-block to control its width */
+    margin-top: 50px; /* Add some margin for spacing */
+  }
+  
+  /* Adjust the size of the PayPal button */
+  .paypal-button-container iframe {
+    width: 350px; /* Set the width */
+    height: 55px; /* Set the height */
+  }
+
+  

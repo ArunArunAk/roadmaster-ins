@@ -1,0 +1,110 @@
+<div class="container claim">
+    <div class="row">
+        <h3 class="text-center">Claim Your Insurance</h3>
+    </div>
+
+<h5 class="mt-3 mb-3">How to Register Ur Claim</h5>
+
+<div class="grid grid-cols-2  md:grid-cols-4 gap-4">
+          
+    <div class="card p-4">
+        <i class="fas fa-mobile text-center"></i>
+        <div class="card-body">
+            <p class="card-text text-center">Register Claim By Calling 3455363</p>
+        </div>
+    </div>
+
+
+    <div class="card p-4">
+        <i class="fas fa-poll text-center"></i>
+        <div class="card-body">
+            <p class="card-text text-center">Surve of submit claim document</p>
+        </div>
+    </div>
+
+       
+
+    <div class="card p-4">
+        <i class="fas fa-handshake text-center"></i>
+        <div class="card-body">
+            <p class="card-text text-center">Liability Confirmation</p>
+        </div>
+    </div>
+
+
+
+    <div class="card p-4 ">
+        <i class="fas fa-key text-center"></i>
+        <div class="card-body">
+            <p class="card-text text-center">Vehicle Delivery</p>
+        </div>
+    </div>
+
+ </div>
+
+ <div class="claimform mt-5">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="container">
+          <div class="contact">
+            <div class="contact-form">
+              <form [formGroup]="claimForm" (ngSubmit)="onSubmit()">
+                <h2>Register Your Claim</h2>
+  
+                <label for="policyName">Enter Bike no:</label>
+                <input type="text" id="policyName" formControlName="bikeno" placeholder="Your bike Number" />
+                <div *ngIf="f['bikeno'].hasError('required') && f['bikeno'].touched">
+                    <span class="text-danger">Bike Number required</span>
+                  </div>
+                 
+
+                <label for="policyId">Policy ID:</label>
+                <input type="text" id="policyId" formControlName="policyId" placeholder="Your Policy ID" />
+                <div *ngIf="f['policyId'].hasError('required') && f['policyId'].touched">
+                    <span class="text-danger">Policy Name required</span>
+                  </div>
+                  <div *ngIf="f['policyId'].hasError('pattern') && f['policyId'].touched">
+                    <span class="text-danger">minimum 5 numbers</span>
+                  </div>
+  
+                <label for="policyName">Policy Name:</label>
+                <input type="text" id="policyName" formControlName="policyName" placeholder="Your Policy Name" />
+                <div *ngIf="f['policyName'].hasError('required') && f['policyName'].touched">
+                    <span class="text-danger">Policy Name required</span>
+                  </div>
+                 
+  
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" formControlName="firstName" placeholder="Your First Name" />
+                <div *ngIf="f['firstName'].hasError('required') && f['firstName'].touched">
+                    <span class="text-danger">First name is required</span>
+                  </div>
+  
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" formControlName="lastName" placeholder="Your Last Name" />
+                <div *ngIf="f['lastName'].hasError('required') && f['lastName'].touched">
+                    <span class="text-danger">Last name is required</span>
+                  </div>
+  
+                <label for="email">Email:</label>
+                <input type="email" id="email" formControlName="email" placeholder="Your Email" />
+                <div *ngIf="f['email'].hasError('required') && f['email'].touched">
+                    <span class="text-danger">Email address is required</span>
+                  </div>
+                  <div *ngIf="f['email'].hasError('email') && f['email'].touched">
+                    <span class="text-danger">Invalid email address</span>
+                  </div>
+  
+                <button type="submit" [disabled]="claimForm.invalid">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <img src="https://www.colinsgrp.com/sites/default/files/page-images/adobestock_526250566-converted.jpg" alt="" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+  
+</div>

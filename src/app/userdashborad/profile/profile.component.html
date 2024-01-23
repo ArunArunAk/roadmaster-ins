@@ -1,0 +1,83 @@
+
+<div *ngIf="showNavbar">
+    <ngx-spinner
+    bdColor="white"
+    size="medium"
+    color="blueviolet"
+    type="line-scale-pulse-out-rapid"
+    [fullScreen]="true"
+  >
+    <p style="color: black" class="mt-3">RoadMaster...</p>
+  </ngx-spinner>
+
+<!-- topnavbar -->
+<div class="topnav shadow p-1">
+    <a >User Dashboard</a>
+    <span class="menu" (click)="openNav(true)"><i class="bi bi-list"></i></span>
+</div>
+<!-- topnavbar -->
+
+<!-- left sidebar nav  -->
+
+<div  class="sidebar shadow p-2"  id="sidebar"  [ngStyle]="responsiveMenu">
+
+    <div class="user-info">
+        
+        <img [src]="imgSrc" alt="User Image" class="user-image">
+        <div class="user-name">Hi,{{username}}</div>
+    </div>
+
+     <ul>
+      
+        <li><a routerLink="/user-dashborad/dashboard"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+        <li><a href="/home"><i class="bi bi-house-door"></i> Home</a></li>
+        <li><a routerLink="/user-dashborad/personalinsurance"><i class="bi bi-shield"></i>
+         Insurance</a></li>
+         <li><a routerLink="/user-dashborad/adminapprove">
+            <i class="bi bi-check-circle-fill text-white" style="color: white;"></i> Approved</a></li>
+
+            <li><a routerLink="/user-dashborad/claim">
+                <i class="bi bi-cash"></i>
+                Claim</a></li>
+
+        <li><a routerLink="/user-dashborad/email"><i class="bi bi-envelope"></i>
+         email</a></li>
+        <li><a routerLink="/user-dashborad/password"><i class="bi bi-shield-lock"></i>
+             password</a></li>
+             <li><a routerLink="/user-dashborad/avatar"><i class="bi bi-upload"></i> Avatar</a></li>
+        <!-- <li>
+            <a href="#"><i class="bi bi-bag"></i> Products</a>
+            <ul class="dropdow-container">
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+            </ul>
+        </li> -->
+        <li><a routerLink="/user-dashborad/addtocard1"><i class="bi bi-cart-plus"></i>
+            card </a></li>
+           
+        <li><a routerLink="/user-dashborad/delete" ><i class="bi bi-trash"></i>
+            Delete </a></li>
+            <li (click)="logout()"><a ><i class="bi bi-box-arrow-right"></i> Logout </a></li>
+              
+         <li (click)="logout()"><a ><i class="bi bi-trash"></i>hii </a></li>
+
+    
+          
+                
+           
+
+           
+
+
+    </ul>
+</div>
+<!-- left sidebar nav  -->
+
+
+<!-- main content  -->
+
+<div class="main-content" [ngStyle]="responsiveContent">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- main content  -->

@@ -1,0 +1,11 @@
+.confirmation{
+    height: 400px;
+
+}
+.confirmation h5{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 200px;
+    border: 2px solid skyblue;
+    padding: 20px;
+}

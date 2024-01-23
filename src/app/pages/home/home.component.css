@@ -1,0 +1,73 @@
+
+
+
+.profilebanner-containers{
+    width:100%;
+    height:180px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705390065288?alt=media&token=ef4a049b-3b14-4870-a207-e2b8f05cce02);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    background-color: blue;
+} 
+.profilebanner-title{
+    text-align: center;
+    color:aliceblue;
+    font-weight: 1000;
+    font-size: 200px;
+    padding-top: 60px;
+
+}
+.profilebanner-title h1{
+   font-size: 50px;
+   font-weight: 900;
+}
+.profilebanner-title h6{
+        font-weight:800;
+}
+
+.featured-section h2{
+    color: var(--blue) !important;
+    font-size: 24px;
+    font-weight: 800;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px; /* Adjust the value for more or less rounding */
+   
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid black 
+}
+.featured-section p{
+    color: #4B5563;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+@media only screen and (max-width: 600px) {
+    .featured-section p{
+        color: #4B5563;
+        font-size: 15px;
+        font-weight: 800;
+        margin-bottom: 40px;
+        margin-top: 10px;
+    
+    } 
+    .profilebanner-title{
+        text-align: center;
+        color:aliceblue;
+        font-weight: 1000;
+        font-size: 200px;
+        padding-top: 30px;
+    
+    }
+    .profilebanner-containers{
+        width:100%;
+        height:180px;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(''); */
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-size: cover;
+        background-color: blue;
+    }
+}

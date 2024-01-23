@@ -1,0 +1,133 @@
+/* body {
+    margin-top: 20px;
+    background: #f6f9fc;
+}
+
+.registration-container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+}
+
+.account-block {
+    padding: 0;
+    background-image: url('/assets/bike5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.account-block .overlay {
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.account-block .account-testimonial {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.text-theme {
+    color: #5369f8 !important;
+}
+
+span {
+    color: #5369f8 !important;
+}
+
+h6 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.btn-theme {
+    background-color: #5369f8;
+    border-color: #5369f8;
+    color: #fff;
+    width: 100%;
+} */
+
+
+
+
+
+
+.registration-container {
+    max-width: 800px;
+    /* margin: auto; */
+    margin-top: 0px; /* Adjusted margin */
+    padding: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+}
+
+.account-block {
+    padding: 0;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705661893400?alt=media&token=48ff072f-39bc-4ae5-be02-49f6990c9505");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    position: relative;
+    height: 650px;
+    
+}
+
+.account-block .overlay {
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.account-block .account-testimonial {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.text-theme {
+    color: #5369f8 !important;
+}
+
+span {
+    color: #5369f8 ;
+}
+
+h6 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.btn-theme {
+    background-color: #5369f8;
+    border-color: #5369f8;
+    color: #fff;
+    width: 100%;
+}

@@ -1,0 +1,94 @@
+<div class="container showplan">
+    <div class="card">
+        <img src={{singleinsurancedetails.data.policyproviderimg}} height="100" width="100" alt="Insurance Provider Image">
+        <div class="card-body">
+            <h5 class="card-title  ">{{singleinsurancedetails.data.policyname}}</h5>
+            <p class="card-text"><strong>Policy ID:</strong> {{singleinsurancedetails.data.policyid}}</p>
+            <p class="card-text"><strong>Policy Type:</strong>{{singleinsurancedetails.data.policytype}}  </p>
+            <p class="card-text"><strong>Policy Category:</strong> {{singleinsurancedetails.data.policycategory}}</p>
+            <p class="card-text"><strong>Policy Duration:</strong> {{singleinsurancedetails.data.policyduration}}</p>
+            <p class="card-text"><strong>Policy Price:</strong> {{singleinsurancedetails.data.policyprice}}</p>
+            <p class="card-text"><strong>Policy Description:</strong>{{singleinsurancedetails.data.policydescription}}</p>
+            <p class="card-text"><strong>Policy Provider:</strong> {{singleinsurancedetails.data.policyprovidername}}</p>
+        </div>
+
+        <div class="text-right mt-3">
+            <!-- PayPal Button with smaller size -->
+            <p class="paymentspara">payments</p>
+            <div #paymentRef class="btn btn-sm"></div>
+      
+            <!-- Text on the next line -->
+            <p class="mt-2  paymentsor">or</p>
+      
+            <!-- Free Insurance Button -->
+            <button class="btn btn-warning text-white mr-3 " (click)="getFreeInsurance()">Free Insurance</button>
+          </div>
+    </div>
+</div>
+<form [formGroup]="insuranceForm" (ngSubmit)="onSubmit()">
+   
+    <div class="modal fade" #freeInsuranceModal id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Free Insurance </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Your form fields go here -->
+                    <div class="form-group">
+                        <label for="vehicleNo">Vehicle No</label>
+                        <input type="text" placeholder="Enter vehicle Number" class="form-control" id="vehicleNo" formControlName="vehicleNo">
+                        <div *ngIf="f['vehicleNo'].hasError('required') && f['vehicleNo'].touched">
+                            <span class="text-danger">Vehicle Number required</span>
+                        </div>
+                        <div *ngIf="f['vehicleNo'].hasError('pattern') && f['vehicleNo'].touched">
+                            <span class="text-danger">Invalid vehicle number format,Example: TN90T6543</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Add other form fields here -->
+                    <!-- For example: -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" formControlName="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number">
+                        <div *ngIf="f['phone'].hasError('required') && f['phone'].touched">
+                            <span class="text-danger">Phone Number required</span>
+                        </div>
+                        <div *ngIf="f['phone'].hasError('pattern') && f['phone'].touched">
+                            <span class="text-danger">Invalid phone number format (10 digits expected)</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" placeholder="Enter State Name" class="form-control" id="state" formControlName="state">
+                        <div *ngIf="f['state'].hasError('required') && f['state'].touched">
+                            <span class="text-danger">State required</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" placeholder="Enter country Name"  class="form-control" id="country" formControlName="country">
+                        <div *ngIf="f['country'].hasError('required') && f['country'].touched">
+                            <span class="text-danger">Country required</span>
+                        </div>
+                    </div>
+
+                    <!-- Add more fields as needed -->
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="close()" data-dismiss="modal">Close</button>
+
+                    <button type="submit" class="btn btn-warning text-white" (click)="getFreeInsuranceuser()" [disabled]="insuranceForm.invalid">Get Free Insurance</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+  

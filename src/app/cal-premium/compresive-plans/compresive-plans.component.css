@@ -1,0 +1,50 @@
+.plan{
+margin-top: 100px;
+}
+.registerno-card{
+    padding: 20px;
+    font-size: 20px;
+}
+/* styles.css */
+
+.card {
+    margin: 20px; /* Add margin for spacing */
+  }
+  
+  .card-img {
+    width: 100px; /* Make the image fill the card width */
+    height: 100px;
+  }
+  
+  .card-body {
+    display: flex;
+    align-items: center; /* Align items vertically in the card body */
+  }
+ 
+ .card-list{
+    border: none;
+    box-shadow:0 0 16px 0 rgba(168,168,168,.4);
+    border-radius: 20px;
+
+  }
+.rules h3{
+    color: blueviolet !important;
+}
+.drpdown{
+  width: 250Px;
+}
+  @media (max-width: 768px) {
+    h5{
+        font-size: 14px;
+    }
+    button{
+        padding: 0px 5px !important;
+    }
+    .card-img {
+        width: 50px;
+        height: 50px;
+      }
+      .rules{
+        display: none;
+      }
+  }

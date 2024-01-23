@@ -1,0 +1,25 @@
+<div class="container mt-5 shadow-effect">
+    <div class="card p-3">
+       <h4 >Leave Comment</h4>
+       <p>You can leave a Comment using This Comment form </p>
+
+      <form #commentform="ngForm" (ngSubmit)="onSubmit(commentform)" >
+        <div class="form-group ">
+            <label for="">Name</label>
+            <input type="text" class="form-control" placeholder="Enter Your Name here"        
+              name="name"  ngModel           
+
+            required >
+        </div>
+
+        <div class="form-group">
+            <label for="">Comment</label>
+            <textarea  cols="30" rows="10" class="form-control" placeholder="Enter Your Name here" name="comment" ngModel 
+            ></textarea>
+        </div>
+
+        <button class="btn btn-success mt-3 btn-theme">Add a comment</button>
+
+      </form>
+    </div>
+</div> 

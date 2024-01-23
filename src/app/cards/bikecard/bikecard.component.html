@@ -1,0 +1,152 @@
+    <div class="profilebanner-containers container-fluid mb-3">
+ 
+        <div class="profilebanner-title col-lg-12 col-md-12 col-12">
+          <h1>Two Wheeler</h1>
+          <h6><i class="fas fa-motorcycle"></i> Compare & Save upto 85%* on <span>Two Wheeler Insurance</span> </h6>
+        </div>
+      </div>
+
+<!-- --------------------------------------------------- -->
+<div class="container nav-areas">
+    <div class="row">
+        <div class="col-lg-3 col-md-3   col-3">
+            <div class="card">
+                <div class="item text-center">
+                    <a  (click)="filter1('1st party')" ><img src="https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705384372239?alt=media&token=94d0109b-7f10-48e9-abe7-96b25036a98c" alt=""></a>
+                <h6  (click)="filter1('1st party')" >1'st party</h6>            
+            </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3   col-3">
+            <div class="card">
+                <div class="item text-center">
+                    <a (click)="filter2('2st party')"><img src="https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705384429235?alt=media&token=14a190eb-0c26-4b92-abfe-3271635e169b" alt=""></a>
+                    <h6 (click)="filter2('2st party')">2'st party</h6>
+                </div>
+            </div>
+       </div>
+
+        <div class="col-lg-3 col-md-3   col-3">
+            <div class="card">
+                <div class="item text-center">
+                    <a  (click)="filter3('3st party')" ><img src="https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705384037199?alt=media&token=7f1637ad-a998-4838-bdfc-faf91ee8ecd5" alt=""></a>
+                    <h6 (click)="filter3('3st party')" >3'st party</h6>
+                </div>
+            </div>
+         </div>
+
+        <div class="col-lg-3 col-md-3   col-3">
+            <div class="card">
+                <div class="item text-center">
+                    <a   (click)="filter4('Add ons')" ><img src="
+                        https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705384323393?alt=media&token=139c6141-c920-4b54-9ed8-01dd28ee51a7" alt=""></a>
+                    <h6 (click)="filter4('Add ons')">Add- ons </h6>
+                </div>
+            </div>
+      </div>
+
+    </div>
+</div>
+
+
+
+<!-- <hr class="card-line mt-3 " style="border-color: #757575; border-width: px;"> -->
+
+<!-- _____________________________________ style="width: 100%"-->
+<div class="container cardarea">
+
+    <div class="row">
+        <div  *ngFor="let showplan of filtercategory " class="col-lg-3 col-md-3 col-12">
+            <div class="card" >
+                <img class="card-img-top" src={{showplan.data.policyproviderimg}} alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"  >{{showplan.data.policyname}}</h5>
+                  
+                  <p class="card-text"  style="white-space: nowrap; overflow:hidden; text-overflow: ellipsis; max-width: 100ch;">{{showplan.data.policydescription}}</p>
+                  <p><strong>&#8377;{{showplan.data.policyprice}}</strong></p>
+
+                
+                  <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-2 py-2.5 text-center me-2 mb-2" [routerLink]="['/showplancard',showplan.id]">Take Insurance</button>&nbsp;
+
+
+                  <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 py-2.5 text-center me-2 mb-2" (click)="addtocart(showplan)">Add Saver</button>
+
+
+                </div>
+              </div>
+        </div>
+    </div>
+ 
+    <div class="text-center mt-3  " *ngIf="viewcount > filtercategory">
+        <!-- "View More" button -->
+        <!-- <button type="button" class="btn btn-primary" (click)="loadMore()">View More</button> -->
+        <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="loadMore()">View More..</button>
+
+      </div>
+
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <div class="row">
+    <div class="col-lg-12  mb-12 col-sm-12">
+        <div class="container d-flex card-header">
+            <div class="item">
+               <a href=""><img src="assets/car010 - Copy.png" alt=""></a>
+               <h6>1'st party</h6>
+            </div>
+            <div class="item">
+                <a href=""><img src="assets/car020 - Copy.png" alt=""></a>
+                <h6>2'st party</h6>
+        
+            </div>
+            <div class="item">
+                <a href=""><img src="assets/car030 - Copy.png" alt=""></a>
+                <h6>3'st party</h6>
+        
+            </div>
+            <div class="item">
+                <a href=""><img src="assets/car040 - Copy.png" alt=""></a>
+                <h6>Add-ons</h6>
+            </div>
+        
+        </div>
+    </div>
+
+
+
+<!-- 
+ <div class="container">
+    <div class="row">
+        <div *ngFor="let product of productlist" class="col-md-3 col-sm-6 mb-3">
+            <div class="card">
+                <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.title}}</h5>
+                    <p class="card-text">{{product.description}}</p>
+                    <p><strong>${{product.price}}</strong></p>
+                    <a href="#" class="btn btn-success btn-block">Take Insurance</a>
+                    <a href="#" class="btn btn-info btn-block">Add Saver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

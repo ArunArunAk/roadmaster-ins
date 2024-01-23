@@ -1,0 +1,56 @@
+.card{
+    background-color: var(--secondary-color);
+    /* box-shadow: 0 0 33px -10px rgba(71, 114, 254, 0.3); */
+   border:none;
+   
+}
+input[type=email]{
+    margin-left: 8px;
+}
+
+input[type=text],input[type=email]{
+    margin-top: 5px;
+    height: 60px;
+    padding-left:20px ;
+   font-size:13px;
+   width: 100%;
+}
+
+.btn-sub{    
+    margin-top: 5px;
+    height: 58px;
+    border: none;
+    font-size: 13px;
+    background-color: var(--primary-color);
+    width: 85%;
+    color: white;
+} 
+/* .subs-text{
+    width: 500px;
+} */
+.form-subscribe {
+    margin-top: 20px;
+}
+@media (max-width: 600px) {
+   
+    .btn-sub{
+        width:100px;
+        margin-left: 20px;
+    }
+   .subs-text{
+    padding-left: 30px;
+}
+    .card{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+ input[type=text],input[type=email]{
+    margin-top: 5px;
+    height: 60px;
+    padding-left:20px ;
+   font-size:13px;
+   width: 100%;
+}
+

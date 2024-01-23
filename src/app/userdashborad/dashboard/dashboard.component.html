@@ -1,0 +1,54 @@
+
+
+   <div class="container mt-5">
+    <h1>Roadmaster Dashboard</h1>
+    <p>Welcome, {{ firstName }} {{ lastName }}!</p>
+    <div class="row">
+
+     
+
+      <div class="col-md-4">
+        <div class="dashboard-box bg-success text-white">
+          <h2>{{ paidInsuranceCount }}</h2>
+          <p class="text-white">Paid Insurance</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="dashboard-box bg-primary text-white">
+          <h2>{{ freeInsuranceCount }}</h2>
+          <p class="text-white">Free Insurance</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="dashboard-box bg-warning text-white">
+          <h2>{{ waitingForAdminCount }}</h2>
+          <p class="text-white">Waiting for Admin Access</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="dashboard-box bg-info text-white">
+          <h2>{{   TotalInsurance
+          }}</h2>
+          <p class="text-white">Total Insurance</p>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="dashboard-box bg-danger text-white">
+        <h2>{{   TotalClaim
+        }}</h2>
+        <p class="text-white">Claim</p>
+    </div>
+    </div>
+    <div class="col-md-4"></div>
+
+
+  </div>
+
+  </div>
+  

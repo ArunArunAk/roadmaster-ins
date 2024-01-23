@@ -1,0 +1,16 @@
+<div class="card mt-3 mt-2 pb-5 shadow-effect">
+    <div class="card-body">
+
+        <div class="comment-box mt-3" *ngIf="commandslists">
+             <h6 class="mb-0"> {{commandslists.data.username}}</h6>
+             <small class="text-danger">Last Update {{commandslists.data.date.toMillis()| date}} </small>
+
+             <div class="mt-2 mb-3">{{commandslists.data.comments}}
+             </div>
+             <a href="#" class="mt-1 reply">Reply</a>
+             <a href="#" class="mt-1 ml-3 reply">view Reply</a>
+           <hr>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.card{
+    border: none;
+    /* box-shadow:0 0 16px 0 rgba(168,168,168,.4); */
+
+}
+.belowcardslider a{
+ text-decoration: none;
+}
+.card-nav ul li{
+  margin-bottom: 25px;
+}
+.card-nav{
+    border: none;
+    box-shadow: 0 0 16px 0 rgba(168, 168, 168, 0.2);
+    cursor: pointer;
+
+}
+.card-nav li{
+  color:blue
+
+}
+
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+@media only screen and (max-width: 600px) {
+  .pagination-wrapper{
+    margin-right: 50px;
+  }
+}

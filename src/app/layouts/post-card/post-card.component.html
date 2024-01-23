@@ -1,0 +1,42 @@
+<!-- 
+
+ <div class="card " *ngIf="post" [routerLink]="['/post',post.id]">
+    <img class="card-img-top" width="20" height="200px"  alt="post-image" src="{{post?.data.postimgpath}}">
+
+   <div class="card-body ">
+     <small class="bg-light text-danger text-center viewsource">{{post?.data.category.category}}</small>
+     <small class="bg-light text-success text-center viewsource" *ngIf="post?.data.isFeautured == true">Feauture</small>
+     <small class="bg-light text-info text-center viewsource">Views-{{post?.data.views}}</small>
+    
+
+     <h5 style="width:100% ;height: 70px;"class="view-para">{{post?.data.title}}
+     </h5>
+
+
+     <p class="excerpt" style="width: 100%; height: 150px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+      {{post?.data.excerpt}}
+    </p> 
+  
+
+     <small class="bg-light text-warning text-center viewsource">Last updated {{post?.data.createAt.toMillis()| date}} </small>
+
+    </div>
+</div> 
+
+ -->
+
+ <div class="container mt-1 mb-3"  *ngIf="post" [routerLink]="['/post',post.id]">
+  <div class="card custom-card">
+    <div class="card-overlay"></div>
+    <img src="{{post?.data.postimgpath}}"  class="card-img-top" alt="Your Image">
+    <div class="card-text-container">
+      <h5 class="card-title"><small class="bg-light text-danger text-center viewsource  rounded-label "> {{post?.data.category.category}}</small> 
+      </h5>
+
+      <h4 class="text">{{post?.data.title}}
+      </h4>
+      <p class="text-para">last Updated {{post?.data.createAt.toMillis()| date}}</p>
+    </div>
+  </div>
+</div>
+

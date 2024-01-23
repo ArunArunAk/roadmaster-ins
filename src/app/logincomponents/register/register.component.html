@@ -1,0 +1,136 @@
+<!-- 
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-6 d-none d-lg-inline-block">
+                                <div class="account-block rounded-left">
+                                    <div class="overlay rounded-left"></div>
+                                    <div class="account-testimonial">
+                                        <h4 class="text-white mb-4">Join RoadMaster Now!</h4>
+                                        <p class="lead text-white">"Secure your journey with us. Sign up for the best insurance experience."</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="p-5 registration-container">
+                                    <div class="mb-5">
+                                        <h3 class="h4 font-weight-bold text-theme">Register</h3>
+                                    </div>
+    
+                                    <h6 class="h5 mb-0">Create your <span>RoadMaster</span> Account </h6>
+                                    <p class="text-muted mt-2 mb-5">Please fill in the required information.</p>
+    
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="firstName">First Name:</label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name:</label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email address:</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <label for="password">Password:</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                        </div>
+                                        <button type="submit" class="btn btn-theme">Register</button>
+                                        <p class="text-muted text-center mt-3 mb-0">Already have an account? <a href="#" class="text-primary ml-1">Login</a></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+ -->
+
+
+ <body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-6 d-none d-lg-inline-block">
+                                <div class="account-block rounded-left">
+                                    <div class="overlay rounded-left"></div>
+                                    <div class="account-testimonial">
+                                        <h4 class="text-white mb-4">Join RoadMaster Now!</h4>
+                                        <p class="lead text-white">"Secure your journey with us. Sign up for the best insurance experience."</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="p-3 p-md-5 registration-container">
+                                    <div class="mb-3">
+                                        <h3 class="h4 font-weight-bold text-theme">Register</h3>
+                                    </div>
+    
+                                    <h6 class="h5 mb-0">Create your <span>RoadMaster</span> Account </h6>
+                                    <p class="text-muted mt-2 mb-3">Please fill in the required information.</p>
+    
+                                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                        <div class="form-group">
+                                          <label for="firstName">First Name:</label>
+                                          <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                                          <div *ngIf="f['firstName'].hasError('required') && f['firstName'].touched">
+                                            <span class="text-danger">First name is required</span>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="lastName">Last Name:</label>
+                                          <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                                          <div *ngIf="f['lastName'].hasError('required') && f['lastName'].touched">
+                                            <span class="text-danger">Last name is required</span>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="email">Email address:</label>
+                                          <input type="email" class="form-control" id="email" formControlName="email">
+                                          <div *ngIf="f['email'].hasError('required') && f['email'].touched">
+                                            <span class="text-danger">Email address is required</span>
+                                          </div>
+                                          <div *ngIf="f['email'].hasError('email') && f['email'].touched">
+                                            <span class="text-danger">Invalid email address</span>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="password">Password:</label>
+                                          <input type="password" class="form-control" id="password" formControlName="password">
+                                          <div *ngIf="f['password'].hasError('required') && f['password'].touched">
+                                            <span class="text-danger">Password is required</span>
+                                          </div>
+                                          <div *ngIf="f['password'].hasError('minlength') && f['password'].touched">
+                                            <span class="text-danger">Password must be at least 6 characters long</span>
+                                          </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-theme mt-3" [disabled]="registerForm.invalid">Register</button>
+                                        <p class="text-muted text-center mt-3 mb-0 ">
+                                          Already have an account? <a [routerLink]="'/login'" class="text-primary ml-1">Login</a>
+                                        </p>
+                                      </form>
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>

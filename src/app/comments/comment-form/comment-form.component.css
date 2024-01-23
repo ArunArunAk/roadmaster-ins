@@ -1,0 +1,21 @@
+.btn{
+    background-color: var(--primary-color)!important;
+
+}
+@media (max-width: 767px) {
+    .btn{
+        padding: 10px;
+    }
+}
+input[type=text]{
+    height: 60px;
+    padding-left:20px ;
+   font-size:13px;
+   width: 100%;
+}
+textarea{
+    font-size:13px;
+    width: 100%;
+    padding-left:20px ;
+
+}

@@ -1,0 +1,68 @@
+.premiumcontainer{
+  margin-top: 76px;
+    height: 500px;
+}
+img{
+    margin-top: 30px;
+}
+h3{
+    margin-top: 110px;
+
+}
+h3{
+    margin-top: 110px;
+
+}
+.text-blueviolet{
+    color: blueviolet;
+}
+.form-group{
+margin-top: 30px;
+}
+/* Add this style to reduce the input box size and center it */
+.smaller-input {
+    width: 75%; /* Adjust the width as needed */
+  }
+  
+  button{
+    width: 75%;
+    margin-top: 20px;
+    
+  }
+
+  /* Default styles for larger screens */
+
+  
+  /* Media query for screens smaller than 768px (typical mobile devices) */
+  @media (max-width: 768px) {
+    .img-fluid {
+       display: none; 
+   }
+   .premiumcontainer{
+      height: 300px;
+  }
+ 
+h3{
+    margin-top: 40px;
+
+}
+h3{
+    margin-top: 50px;
+
+}
+.form-group{
+margin-top: 20px;
+}
+ 
+.smaller-input {
+    width: 85%; /* Adjust the width as needed */
+  }
+  
+  button{
+    width: 85%;
+    margin-top: 20px;
+
+  }
+
+  }
+  

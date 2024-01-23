@@ -1,0 +1,20 @@
+.wrap-error {
+    background-color: #667bf2;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/roadmaster-blog.appspot.com/o/UserIMG%2F1705391129707?alt=media&token=44ca41f5-409e-4b9c-b68c-be7a37969e9f);
+    background-attachment: fixed;
+    background-size: cover;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .wrap-error h1 {
+    font-size: 6.875rem;
+    letter-spacing: -13px;
+    line-height: 1;
+    font-family: montserrat, sans-serif;
+  }
+  h1 span {
+    /* text-shadow: -8px 0 0 rgb(102 123 242); */
+    text-shadow: white;
+  }
+  .text-9xl {
+    font-size: 5.5rem;
+  }

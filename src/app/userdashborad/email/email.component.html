@@ -1,0 +1,29 @@
+<!-- change-email.component.html -->
+
+<div class="change-email-container">
+    <h2 class="text-center mb-3">Change Email</h2>
+  
+    <form [formGroup]="changeEmailForm" (submit)="changeEmail()">
+      <div class="form-group">
+        <label for="newEmail">New Email:</label>
+        <input type="email" id="newEmail" formControlName="newEmail">
+        <div *ngIf="changeEmailForm.get('newEmail')?.invalid && (changeEmailForm.get('newEmail')?.dirty || changeEmailForm.get('newEmail')?.touched)">
+          <small class="error-message" *ngIf="changeEmailForm.get('newEmail')?.errors?.['required'] as required">New Email is required.</small>
+          <small class="error-message" *ngIf="changeEmailForm.get('newEmail')?.errors?.['email'] as email">Invalid email format.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="confirmEmail">Confirm Email:</label>
+        <input type="email" id="confirmEmail" formControlName="confirmEmail">
+        <div *ngIf="changeEmailForm.get('confirmEmail')?.invalid && (changeEmailForm.get('confirmEmail')?.dirty || changeEmailForm.get('confirmEmail')?.touched)">
+          <small class="error-message" *ngIf="changeEmailForm.get('confirmEmail')?.errors?.['required'] as required">Confirm Email is required.</small>
+          <small class="error-message" *ngIf="changeEmailForm.get('confirmEmail')?.errors?.['email'] as email">Invalid email format.</small>
+          <small class="error-message" *ngIf="changeEmailForm.get('confirmEmail')?.errors?.['emailMismatch'] as emailMismatch">Emails do not match.</small>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="changeEmailForm.invalid">Change Email</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,14 @@
+.dashboard-box {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .dashboard-box{
+    background-color: var(--blue) !important;
+  }
+  @media only screen and (max-width: 600px) {
+   h1{
+    font-size: 14px;
+   }
+}

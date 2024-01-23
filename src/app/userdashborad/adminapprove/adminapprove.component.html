@@ -1,0 +1,95 @@
+
+<ng-container *ngIf="!FreeInsuranceView">
+  
+
+    <div class="container-fluid  mt-100">
+				 <div class="row">
+				 
+					<div class="col-md-12">
+					
+							<div class="card">
+						<div class="card-header">
+						<h5 class="text-center">ADMIN APPROVE AREA</h5>
+						</div>
+						<div class="card-body cart">
+								<div class="col-sm-12 empty-cart-cls text-center">
+									<img src="https://previews.123rf.com/images/garagestock/garagestock1701/garagestock170113262/68676678-admin-concept-on-tablet-pc-screen-with-icons.jpg" width="400" height="400" class="img-fluid mb-4 mr-3">
+									<h3><strong></strong></h3>
+									<h4>Now No Need  Approve From admin for ur insurance or</h4>
+                  <h4>Take New Insurance</h4>
+
+									
+								
+								</div>
+						</div>
+				</div>
+						
+					
+					</div>
+				 
+				 </div>
+                </div>
+				
+
+</ng-container>
+
+<ng-container *ngIf="FreeInsuranceView"  >
+  <div class="container">
+            
+       <h3 class="text-center mx-5">Wait For Admin Access </h3>
+        <p class="text-center">Below Listed Insurance Wait For Admin Access</p>
+         <p class="text-center">Free Insurance u can use and take Print After Admin Access</p>
+        <div class="table-responsive">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Id</th>
+                <th scope="col">Vehicle no</th>
+                <th scope="col">Take</th>
+                <th scope="col">Expired</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Category</th>
+                <th scope="col">status</th>
+
+
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let freeins of ListOfUserFreeInsurance ; let i = index" >
+                <td>{{i+1}}</td>
+                <td>{{freeins.data.policyid}}</td>
+                <td>{{freeins.data.VehicleNumber}}</td>
+                <td>{{freeins.data.TakeInsurancedate.toMillis()| date}}</td>
+                <td>{{freeins.data.ExpirationDate.toMillis()| date}}</td>
+                <td>{{freeins.data.policyduration}}</td>
+                <td>{{freeins.data.policycategory}}</td>
+                <td>
+                  <button class="btn btn-success btn1 " *ngIf="freeins.data.adminAccess == true">ACTIVE</button>
+                  <button class="btn btn-warning btn1 " *ngIf="freeins.data.adminAccess == false">Wait Admin Access</button>
+
+                </td>
+               
+
+              </tr>
+             
+            </tbody>
+           
+            
+          </table>
+        </div>
+    
+         
+      </div>
+ 
+</ng-container>
+
+
+
+
+
+
+
+
+ 

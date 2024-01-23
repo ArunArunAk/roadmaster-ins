@@ -1,0 +1,35 @@
+<!-- delete-account.component.html -->
+
+<!-- <div *ngIf="showNavbar">
+  <ngx-spinner
+  bdColor="white"
+  size="medium"
+  color="blueviolet"
+  type="line-scale-pulse-out-rapid"
+  [fullScreen]="true"
+>
+  <p style="color: black" class="mt-3">RoadMaster...</p>
+</ngx-spinner> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-12">
+      <div class="delete-account-container text-center">
+        <h2 class="">Delete Account</h2>
+      
+        <div class="confirmation-message">
+          <p>Are you sure you want to delete your account from Roadmaster permanently?</p>
+          <p>This action cannot be undone.</p>
+        </div>
+      
+        <div class="confirmation-buttons">
+          <button class="btn btn-warning" (click)="cancel()" routerLink="/user-dashborad/Dashboard">Cancel</button>&nbsp;
+          <button  class="btn btn-success mt-2" (click)="confirmDelete()">Delete My Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

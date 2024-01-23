@@ -1,0 +1,31 @@
+<div class="container showplan">
+    <div class="card animated fadeInUp"  style="animation-delay:3s ;">
+        <img src={{singleinsurancedetails.data.policyproviderimg}} height="100" width="100" alt="Insurance Provider Image">
+        <div class="card-body">
+            <h5 class="card-title animated fadeInDown " style="animation-delay:3s ;">{{singleinsurancedetails.data.policyname}}</h5>
+            <p class="card-text animated fadeInDown" style="animation-delay:4s ;"><strong>Policy ID:</strong> {{singleinsurancedetails.data.policyid}}</p>
+            <p class="card-text animated fadeInDown"  style="animation-delay:5s ;"><strong>Policy Type:</strong>{{singleinsurancedetails.data.policytype}}  </p>
+            <p class="card-text animated fadeInDown" style="animation-delay:5s ;"><strong>Policy Category:</strong> {{singleinsurancedetails.data.policycategory}}</p>
+            <p class="card-text animated fadeInDown" style="animation-delay:6s ;"><strong>Policy Duration:</strong> {{singleinsurancedetails.data.policyduration}}</p>
+            <p class="card-text animated fadeInDown" style="animation-delay:7s ;"><strong>Policy Price:</strong> {{singleinsurancedetails.data.policyprice}}</p>
+            <p class="card-text animated fadeInDown" style="animation-delay:8s ;"><strong>Policy Description:</strong>{{singleinsurancedetails.data.policydescription}}</p>
+            <p class="card-text animated fadeInDown" style="animation-delay:9s ;"><strong>Policy Provider:</strong> {{singleinsurancedetails.data.policyprovidername}}</p>
+        </div>
+<!-- Your existing template code -->
+
+<!-- Modal -->
+
+  
+        <div class="text-right mt-3">
+            <!-- PayPal Button with smaller size -->
+            <p class="paymentspara">payments</p>
+            <div #paymentRef class="btn btn-lg" ></div>
+      
+            <!-- Text on the next line -->
+            <p class="mt-2  paymentsor">or</p>
+           
+            <!-- Free Insurance Button -->
+            <button class="btn btn-warning text-white mr-3 " (click)="getFreeInsurance()">Free Insurance</button>
+          </div>
+    </div>
+</div>
