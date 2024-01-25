@@ -18,7 +18,7 @@
         <h2 class="text-blueviolet animated fadeInUp" style="animation-delay:5s ;">60 seconds!</h2>
         <form [formGroup]="premiumForm" (ngSubmit)="submitForm()">
           <div class="form-group">
-            <input type="text" class="form-control smaller-input" formControlName="bikeNumber" placeholder="Enter Two number (e.g., TN90T6543)">
+            <input type="text" class="form-control smaller-input" formControlName="bikeNumber" placeholder="Enter 2 wheeler number (e.g., TN90T6543)">
             <div *ngIf="premiumForm?.get('bikeNumber')?.hasError('pattern') && premiumForm?.get('bikeNumber')?.touched">
               <small class="text-danger">Invalid bike number format. Example: TN90T6543</small>
             </div>
