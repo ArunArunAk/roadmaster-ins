@@ -19,9 +19,9 @@
         <h2 class="text-blueviolet animated fadeInDown " style="animation-delay:5s ;" >60 seconds!</h2>
         <form [formGroup]="premiumForm" (ngSubmit)="submitForm()">
           <div class="form-group">
-            <input type="text" class="form-control smaller-input" formControlName="carNumber" placeholder="Enter Four number (e.g., TN90T6543)">
+            <input type="text" class="form-control smaller-input" formControlName="carNumber" placeholder="Enter Four wheel number (e.g., TN90T6543)">
             <div *ngIf="premiumForm?.get('carNumber')?.hasError('pattern') && premiumForm?.get('carNumber')?.touched">
-              <small class="text-danger">Invalid car number format. Example: TN90TT6543</small>
+              <small class="text-danger">Invalid car number format. Example: TN90TT6543 or TN90G5645</small>
             </div>
           </div>
           <button type="submit" class="btn btn-primary"  [disabled]="premiumForm.get('carNumber')?.invalid">Calculate Premium</button>

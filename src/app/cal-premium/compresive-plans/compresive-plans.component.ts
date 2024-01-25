@@ -11,6 +11,8 @@ import { InsuranceService } from 'src/app/services/insurance.service';
 export class CompresivePlansComponent implements OnInit {
   originalPlans: Array<any> = [];
   filteredPlans: Array<any> = [];
+  filteredPlansextra: Array<any> = [];
+
   policyCategory = '2 wheeler'; // Replace with the desired policy category
   showspinner=true;
   bikeNumber!:any
@@ -42,6 +44,9 @@ export class CompresivePlansComponent implements OnInit {
 
       // Filter plans based on the policy category
       this.filteredPlans = this.originalPlans.filter(plan => plan.data.policycategory === this.policyCategory);
+      console.log("new",this.filteredPlans)
+      this.filteredPlansextra = this.originalPlans.filter(plan => plan.data.policycategory === this.policyCategory);
+
       setTimeout(() => {
         this.showspinner=false
 
@@ -88,14 +93,14 @@ fliter() {
 }
 filter1(category: any) {
   this.currentFilter = "1'st party"; // Update the current filter value
-  this.filtercategory = this.originalPlans.filter(
+  this.filtercategory = this.filteredPlansextra.filter(
     (a: any) => a.data.policytype == this.currentFilter
   );
   this.filteredPlans = this.filtercategory;
 }
 filter2(category: any) {
   this.currentFilter = "2'st party"; // Update the current filter value
-  this.filtercategory = this.originalPlans.filter(
+  this.filtercategory = this.filteredPlansextra.filter(
     (a: any) => a.data.policytype == this.currentFilter
   );
   this.filteredPlans = this.filtercategory;
@@ -103,7 +108,7 @@ filter2(category: any) {
 
 filter3(category: any) {
   this.currentFilter = "3'st party"; // Update the current filter value
-  this.filtercategory = this.originalPlans.filter(
+  this.filtercategory = this.filteredPlansextra.filter(
     (a: any) => a.data.policytype == this.currentFilter
   );
   this.filteredPlans = this.filtercategory;
@@ -111,13 +116,13 @@ filter3(category: any) {
 
 filter4(category: any) {
   this.currentFilter = 'Add ons'; // Update the current filter value
-  this.filtercategory = this.originalPlans.filter(
+  this.filtercategory = this.filteredPlansextra.filter(
     (a: any) => a.data.policytype == this.currentFilter
   );
   this.filteredPlans = this.filtercategory;
 }
 filterAll(){
-  this.filteredPlans = this.originalPlans.filter(
+  this.filteredPlans = this.filteredPlansextra.filter(
     (plan) => plan.data.policycategory === this.policyCategory
   );
 }

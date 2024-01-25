@@ -1,1 +1,10 @@
-{}
+{
+  "hosting": {
+    "public": "roadmasterang",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

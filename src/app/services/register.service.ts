@@ -91,7 +91,9 @@ export class RegisterService {
       })
     )
   }
-  
+  checksubs(subscriberEmail:any){
+    return this.AFS.collection('user-registration',ref => ref.where('email', '==',subscriberEmail)).get()
+  }
   upateData(id:any,editdata:any){
    this.AFS.collection("user-registration").doc(id).update(editdata).then(docred=>{
     this.toastr.success( "ur deatil Editted Successfully..!");

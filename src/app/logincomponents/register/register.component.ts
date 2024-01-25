@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { RegisterService } from 'src/app/services/register.service';
 import { register } from 'src/models/register';
 
@@ -12,7 +13,7 @@ import { register } from 'src/models/register';
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor(private fb: FormBuilder,private registrationservices:RegisterService,private router:Router) {}
+  constructor(private fb: FormBuilder,private registrationservices:RegisterService,private router:Router,private toaste:ToastrService) {}
 
   ngOnInit() {
 
@@ -51,8 +52,18 @@ export class RegisterComponent implements OnInit {
 
     };
     console.log(this.registerForm.value);
-    this.registerForm.reset();
-    console.log("registration",registration);
-   this.registrationservices.savedata(registration);
+    this.registrationservices.checksubs(this.registerForm.value.email).subscribe(val=>{
+      if(val.empty){
+        this.registerForm.reset();
+        console.log("registration",registration);
+       this.registrationservices.savedata(registration);
+      }else{
+        this.toaste.warning("email In already use","warning")
+        window.scrollTo(0, 0);
+
+      }
+    })
+   
+    
   }
 }

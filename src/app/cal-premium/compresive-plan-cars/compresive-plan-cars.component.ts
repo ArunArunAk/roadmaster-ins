@@ -11,6 +11,8 @@ import { InsuranceService } from 'src/app/services/insurance.service';
 export class CompresivePlanCarsComponent implements OnInit {
   originalPlans: Array<any> = [];
   filteredPlans: Array<any> = [];
+  filteredPlansextra: Array<any> = [];
+
   filtercategory!: Array<any>;
   productlist!: Array<any>;
   policyCategory = '4 wheeler'; // Replace with the desired policy category
@@ -46,6 +48,10 @@ export class CompresivePlanCarsComponent implements OnInit {
       this.filteredPlans = this.originalPlans.filter(
         (plan) => plan.data.policycategory === this.policyCategory
       );
+      this.filteredPlansextra = this.originalPlans.filter(
+        (plan) => plan.data.policycategory === this.policyCategory
+      );
+      console.log("new",this.filteredPlans);
 
       setTimeout(() => {
         this.showspinner = false;
@@ -87,7 +93,7 @@ export class CompresivePlanCarsComponent implements OnInit {
 
   filter1(category: any) {
     this.currentFilter = "1'st party"; // Update the current filter value
-    this.filtercategory = this.originalPlans.filter(
+    this.filtercategory = this.filteredPlansextra.filter(
       (a: any) => a.data.policytype == this.currentFilter
     );
     this.filteredPlans = this.filtercategory;
@@ -95,7 +101,7 @@ export class CompresivePlanCarsComponent implements OnInit {
 
   filter2(category: any) {
     this.currentFilter = "2'st party"; // Update the current filter value
-    this.filtercategory = this.originalPlans.filter(
+    this.filtercategory = this.filteredPlansextra.filter(
       (a: any) => a.data.policytype == this.currentFilter
     );
     this.filteredPlans = this.filtercategory;
@@ -103,7 +109,7 @@ export class CompresivePlanCarsComponent implements OnInit {
 
   filter3(category: any) {
     this.currentFilter = "3'st party"; // Update the current filter value
-    this.filtercategory = this.originalPlans.filter(
+    this.filtercategory = this.filteredPlansextra.filter(
       (a: any) => a.data.policytype == this.currentFilter
     );
     this.filteredPlans = this.filtercategory;
@@ -111,13 +117,13 @@ export class CompresivePlanCarsComponent implements OnInit {
 
   filter4(category: any) {
     this.currentFilter = 'Add ons'; // Update the current filter value
-    this.filtercategory = this.originalPlans.filter(
+    this.filtercategory = this.filteredPlansextra.filter(
       (a: any) => a.data.policytype == this.currentFilter
     );
     this.filteredPlans = this.filtercategory;
   }
   filterAll(){
-    this.filteredPlans = this.originalPlans.filter(
+    this.filteredPlans = this.filteredPlansextra.filter(
       (plan) => plan.data.policycategory === this.policyCategory
     );
   }

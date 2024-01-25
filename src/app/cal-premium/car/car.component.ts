@@ -25,7 +25,8 @@ export class CarComponent implements OnInit {
       });  
 
     this.premiumForm = this.fb.group({
-      carNumber: ['', [Validators.required, Validators.pattern(/^[A-Za-z]{2}\d{2}[A-Za-z]\d{4}$/)]]
+      carNumber: ['', [Validators.required, Validators.pattern(/^[A-Za-z]{2}\s?\d{2}\s?[A-Za-z]{1,2}\s?\d{4}$/
+      )]]
     });
     this.spinner.show()
     setTimeout(() => {
