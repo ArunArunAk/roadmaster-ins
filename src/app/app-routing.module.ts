@@ -40,6 +40,8 @@ import { ClaimComponent } from './userdashborad/claim/claim.component';
 const routes: Routes = [
   { path: '', component: IndexComponent }, 
   { path: 'home', component: IndexComponent }, 
+  { path: 'home-home', component: IndexComponent }, 
+
   { path: 'claim', component: ClaimprocessComponent,canActivate: [authGuard] }, 
 
 
